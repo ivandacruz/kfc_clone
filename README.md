@@ -1,3 +1,3 @@
 # Clone-Interface-KFC
 
-Projeto copiando a inerface do kfc.
+Projeto copiando a interface do kfc.
