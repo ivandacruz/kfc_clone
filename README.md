@@ -1,7 +1,6 @@
 # Clone-Interface-KFC
 
 * Projeto copiando a interface do kfc.
-###Screen
 
 <img src="KFC/kfc.png" width="300">
 
