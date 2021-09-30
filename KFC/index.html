@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>KFC Landing Page | Responsive Design</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<section class="main">
+		<header>
+			<a href="#"><img src="img/logo.png" class="logo"></a>
+			<div class="toggle"></div>
+			<ul class="navigation">
+				<li><a href="https://kfcbrasil.com.br/enderecos/">Endereços</a></li>
+				<li><a href="https://kfcbrasil.com.br/cardapio/">Cardápio</a></li>
+				<li><a href="https://kfcbrasil.com.br/institucional/">Sobre</a></li>
+				<li><a href="https://kfcbrasil.com.br/fale-conosco/">Fale Conosco</a></li>
+			</ul>
+		</header>
+		<div class="content">
+			<div class="text">
+				<h2>Its Finger&copy;<br>Lickin <span>Good.</span></h2>
+				<p>A expressão Lorem ipsum em design gráfico e editoração é um texto padrão em latim utilizado na produção gráfica para preencher os espaços de texto em publicações para testar e ajustar aspectos visuais antes de utilizar conteúdo real.</p>
+				<a href="https://kfcbrasil.com.br/cardapio/" class="btn">Novo Pedido</a>
+			</div>
+			<div class="slider">
+				<div class="slides active">
+					<img src="img/burger_fries.png">
+				</div>
+				<div class="slides">
+					<img src="img/french_fries.png">
+				</div>
+				<div class="slides">
+					<img src="img/burger.png">
+				</div>
+				<div class="slides">
+					<img src="img/fried_chicken.png">
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<ul class="sci">
+				<li><a href="https://www.youtube.com/c/KFCBrasilOriginal"><ion-icon name="logo-facebook"></ion-icon></a></li>
+				<li><a href="https://twitter.com/kfcbrasil?lang=pt"><ion-icon name="logo-twitter"></ion-icon></a></li>
+				<li><a href="https://www.instagram.com/kfcbrasil/"><ion-icon name="logo-instagram"></ion-icon></a></li>
+				<li><a href="https://www.youtube.com/c/KFCBrasilOriginal"><ion-icon name="logo-youtube"></ion-icon></a></li>
+			</ul>
+			<div class="prevNext">
+				<p>Always Fresh</p>
+				<span class="prev"><ion-icon name="chevron-back-outline"></ion-icon></span>
+				<span class="next"><ion-icon name="chevron-forward-outline"></ion-icon></span>
+			</div>
+		</div>
+	</section>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+	<script>
+		//toggle
+		const menutoggle = document.querySelector('.toggle');
+		const navigation = document.querySelector('.navigation');
+
+		menutoggle.onclick = function(){
+			menutoggle.classList.toggle('active')
+			navigation.classList.toggle('active')
+
+		}
+
+		// slides
+		const slides = document.querySelectorAll('.slides');
+		const prev = document.querySelector('.prev');
+		const next = document.querySelector('.next');
+
+		i = 0;
+
+		function ActiveSlide(n){
+			for(slide of slides)
+			    slide.classList.remove('active');
+			    slides[n].classList.add('active');
+		}
+		// function for prev btn
+		next.addEventListener('click', function(){
+			if(i == slides.length - 1){
+				i = 0; 
+				ActiveSlide(i);
+			}
+			else
+			{
+				i++;
+				ActiveSlide(i);
+			}
+		})
+
+		prev.addEventListener('click', function(){
+			if(i == 0){
+				i = slides.length - 1; 
+				ActiveSlide(i);
+			}
+			else
+			{
+				i--;
+				ActiveSlide(i);
+			}
+		})
+	</script>
+
+</body>
+</html>
