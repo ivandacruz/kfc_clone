@@ -1,9 +1,9 @@
 # Clone-Interface-KFC
 
-* Projeto copiando a interface do kfc.
+## Projeto copiando a interface do kfc.
 
 <img src="KFC/kfc.png" width="300">
 
-- Site simples e Interativo. 
+Site simples e Interativo. 
 - Após clonar o projeto.
 - É só abrir em um navegador de sua preferência.
