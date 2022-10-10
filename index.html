@@ -5,12 +5,12 @@
 	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>KFC Landing Page | Responsive Design</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
 	<section class="main">
 		<header>
-			<a href="#"><img src="img/logo.png" class="logo"></a>
+			<a href="#"><img src="./assets/img/logo.png" class="logo"></a>
 			<div class="toggle"></div>
 			<ul class="navigation">
 				<li><a href="https://kfcbrasil.com.br/enderecos/">Endereços</a></li>
@@ -27,16 +27,16 @@
 			</div>
 			<div class="slider">
 				<div class="slides active">
-					<img src="img/burger_fries.png">
+					<img src="./assets/img/burger_fries.png">
 				</div>
 				<div class="slides">
-					<img src="img/french_fries.png">
+					<img src="./assets/img/french_fries.png">
 				</div>
 				<div class="slides">
-					<img src="img/burger.png">
+					<img src="./assets/img/burger.png">
 				</div>
 				<div class="slides">
-					<img src="img/fried_chicken.png">
+					<img src="./assets/img/fried_chicken.png">
 				</div>
 			</div>
 		</div>
@@ -57,54 +57,7 @@
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 
-	<script>
-		//toggle
-		const menutoggle = document.querySelector('.toggle');
-		const navigation = document.querySelector('.navigation');
-
-		menutoggle.onclick = function(){
-			menutoggle.classList.toggle('active')
-			navigation.classList.toggle('active')
-
-		}
-
-		// slides
-		const slides = document.querySelectorAll('.slides');
-		const prev = document.querySelector('.prev');
-		const next = document.querySelector('.next');
-
-		i = 0;
-
-		function ActiveSlide(n){
-			for(slide of slides)
-			    slide.classList.remove('active');
-			    slides[n].classList.add('active');
-		}
-		// function for prev btn
-		next.addEventListener('click', function(){
-			if(i == slides.length - 1){
-				i = 0; 
-				ActiveSlide(i);
-			}
-			else
-			{
-				i++;
-				ActiveSlide(i);
-			}
-		})
-
-		prev.addEventListener('click', function(){
-			if(i == 0){
-				i = slides.length - 1; 
-				ActiveSlide(i);
-			}
-			else
-			{
-				i--;
-				ActiveSlide(i);
-			}
-		})
-	</script>
+	<script src="./assets/script.js"></script>
 
 </body>
 </html>
