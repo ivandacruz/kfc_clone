@@ -137,4 +137,99 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Inicializar o carrossel
     updateCarousel();
+});
+
+// Hero Carousel
+document.addEventListener('DOMContentLoaded', () => {
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    const heroDots = document.querySelector('.hero-dots');
+    const prevBtn = document.querySelector('.hero-carousel-btn.prev');
+    const nextBtn = document.querySelector('.hero-carousel-btn.next');
+    
+    if (!heroSlides.length || !heroDots || !prevBtn || !nextBtn) {
+        console.error('Elementos do carrossel não encontrados');
+        return;
+    }
+
+    let currentSlide = 0;
+    const totalSlides = heroSlides.length;
+    let isTransitioning = false;
+
+    // Criar dots
+    heroSlides.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.className = `hero-dot ${index === 0 ? 'active' : ''}`;
+        dot.addEventListener('click', () => {
+            if (!isTransitioning) {
+                goToSlide(index);
+            }
+        });
+        heroDots.appendChild(dot);
+    });
+
+    // Função para atualizar o carrossel
+    function updateCarousel() {
+        isTransitioning = true;
+        
+        heroSlides.forEach((slide, index) => {
+            slide.classList.toggle('active', index === currentSlide);
+        });
+
+        document.querySelectorAll('.hero-dot').forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+
+        // Resetar o estado de transição após a animação
+        setTimeout(() => {
+            isTransitioning = false;
+        }, 800); // Tempo igual à duração da transição no CSS
+    }
+
+    // Função para ir para um slide específico
+    function goToSlide(index) {
+        if (index === currentSlide || isTransitioning) return;
+        currentSlide = index;
+        updateCarousel();
+    }
+
+    // Event listeners para os botões
+    prevBtn.addEventListener('click', () => {
+        if (!isTransitioning) {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+    });
+
+    nextBtn.addEventListener('click', () => {
+        if (!isTransitioning) {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+    });
+
+    // Auto-play do carrossel
+    let autoplayInterval = setInterval(() => {
+        if (!isTransitioning) {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+    }, 5000);
+
+    // Pausar auto-play quando o mouse estiver sobre o carrossel
+    const heroCarousel = document.querySelector('.hero-carousel');
+    heroCarousel.addEventListener('mouseenter', () => {
+        clearInterval(autoplayInterval);
+    });
+
+    heroCarousel.addEventListener('mouseleave', () => {
+        autoplayInterval = setInterval(() => {
+            if (!isTransitioning) {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateCarousel();
+            }
+        }, 5000);
+    });
+
+    // Inicializar o carrossel
+    updateCarousel();
 }); 

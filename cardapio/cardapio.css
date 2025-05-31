@@ -2,7 +2,8 @@
 .menu-hero {
     height: 50vh;
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                url('https://images.unsplash.com/photo-1626082927389-6cd4f504b4cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+                url('https://images.pexels.com/photos/8463435/pexels-photo-8463435.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+                /* url('https://images.unsplash.com/photo-1626082927389-6cd4f504b4cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'); */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

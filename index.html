@@ -78,15 +78,30 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="video-background">
-            <video autoplay muted loop playsinline id="hero-video" poster="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80">
-                <source src="https://cdn.coverr.co/videos/coverr-fried-chicken-close-up-4282/1080p.mp4" type="video/mp4">
-                <source src="https://cdn.coverr.co/videos/coverr-fried-chicken-close-up-4282/1080p.webm" type="video/webm">
-                <!-- Fallback para navegadores que não suportam vídeo -->
-                <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Frango Frito">
-            </video>
-            <div class="video-overlay"></div>
+        <div class="hero-carousel">
+            <div class="hero-slides">
+                <div class="hero-slide active">
+                    <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Frango Frito">
+                </div>
+                <div class="hero-slide">
+                    <img src="https://cdn.pixabay.com/photo/2016/05/25/10/43/hamburger-1414423_960_720.jpg" alt="Combo Família">
+                </div>
+                <!-- <div class="hero-slide">
+                    <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Sanduíche Duplo">
+                </div> -->
+                <div class="hero-slide">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/19/12/36/fast-food-1839052_1280.jpg" alt="Sanduíche Duplo">
+                </div>
+            </div>
+            <button class="hero-carousel-btn prev" aria-label="Slide anterior">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="hero-carousel-btn next" aria-label="Próximo slide">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="hero-dots"></div>
         </div>
+        <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>O Melhor Frango Frito do Mundo</h1>
             <p>Experimente nossa receita secreta de 11 ervas e especiarias</p>

@@ -5,7 +5,7 @@ const menuItems = [
         name: 'Família 8 Pedaços',
         description: '8 pedaços de frango, 2 porções de batata frita, 2 porções de coleslaw e 4 pães',
         price: 89.90,
-        image: 'https://images.unsplash.com/photo-1626082927389-6cd4f504b4cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+        image: 'https://cdn.pixabay.com/photo/2022/08/31/10/18/hamburger-7422976_1280.jpg'
     },
     {
         id: 2,
