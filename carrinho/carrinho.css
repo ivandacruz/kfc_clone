@@ -1,0 +1,456 @@
+/* Carrinho Section Styles */
+.carrinho-section {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem;
+    padding-top: 100px;
+    background: linear-gradient(135deg, rgba(228, 0, 43, 0.1) 0%, rgba(228, 0, 43, 0.05) 100%);
+}
+
+.carrinho-container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 1200px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.carrinho-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.carrinho-header h1 {
+    color: #e4002b;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.carrinho-header p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Carrinho Content */
+.carrinho-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+/* Produtos Lista */
+.produtos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.produto-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 10px;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.produto-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.produto-imagem {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.produto-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.produto-nome {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.produto-descricao {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.produto-preco {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #e4002b;
+}
+
+.produto-controles {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+.quantidade-controle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantidade-btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: #e4002b;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.quantidade-btn:hover {
+    background: #c40026;
+}
+
+.quantidade-valor {
+    font-size: 1.1rem;
+    font-weight: 600;
+    min-width: 30px;
+    text-align: center;
+}
+
+.remover-produto {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: color 0.3s ease;
+}
+
+.remover-produto:hover {
+    color: #e4002b;
+}
+
+/* Resumo do Pedido */
+.resumo-pedido {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    position: sticky;
+    top: 100px;
+}
+
+.resumo-pedido h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid #eee;
+}
+
+.resumo-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.resumo-item.total {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #e4002b;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid #eee;
+}
+
+/* Cupom de Desconto */
+.cupom-desconto {
+    margin: 1.5rem 0;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.cupom-desconto input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.cupom-desconto input:focus {
+    border-color: #e4002b;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(228, 0, 43, 0.1);
+}
+
+.cupom-desconto button {
+    padding: 0.8rem 1.5rem;
+    background: #e4002b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.cupom-desconto button:hover {
+    background: #c40026;
+}
+
+/* Finalizar Pedido Button */
+.finalizar-pedido {
+    width: 100%;
+    padding: 1rem;
+    background: #e4002b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.finalizar-pedido:hover {
+    background: #c40026;
+    transform: translateY(-2px);
+}
+
+.finalizar-pedido:active {
+    transform: translateY(0);
+}
+
+/* Carrinho Vazio */
+.carrinho-vazio {
+    text-align: center;
+    padding: 3rem;
+}
+
+.carrinho-vazio i {
+    font-size: 4rem;
+    color: #e4002b;
+    margin-bottom: 1rem;
+}
+
+.carrinho-vazio h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.carrinho-vazio p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.btn-cardapio {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: #e4002b;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-cardapio:hover {
+    background: #c40026;
+    transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .carrinho-content {
+        grid-template-columns: 1fr;
+    }
+
+    .resumo-pedido {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .carrinho-container {
+        padding: 1.5rem;
+    }
+
+    .produto-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .produto-imagem {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+    }
+
+    .produto-controles {
+        align-items: center;
+    }
+
+    .quantidade-controle {
+        justify-content: center;
+    }
+
+    .carrinho-botoes {
+        flex-direction: column;
+    }
+
+    .continuar-comprando,
+    .finalizar-pedido {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .carrinho-section {
+        padding: 1rem;
+    }
+
+    .carrinho-container {
+        padding: 1rem;
+    }
+
+    .carrinho-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .produto-imagem {
+        width: 120px;
+        height: 120px;
+    }
+
+    .cupom-desconto {
+        flex-direction: column;
+    }
+
+    .cupom-desconto button {
+        width: 100%;
+    }
+}
+
+/* Mensagens de Feedback */
+.message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    z-index: 1000;
+    animation: slideIn 0.3s ease-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.message.success {
+    background-color: #4CAF50;
+}
+
+.message.error {
+    background-color: #f44336;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Loading Spinner */
+.fa-spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Botões do Carrinho */
+.carrinho-botoes {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.continuar-comprando {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.continuar-comprando:hover {
+    background-color: #ffd700;
+    transform: translateY(-2px);
+    color: #333;
+    text-decoration: none;
+    border-color: #ffd700;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+}
+
+.continuar-comprando:active {
+    transform: translateY(0);
+    background-color: #e6c200;
+}
+
+.finalizar-pedido {
+    flex: 2;
+} 

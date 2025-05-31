@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FC - Delicioso Frango Frito</title>
+    <title>Cardápio - FC</title>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
     
-    <!-- Meta tags para melhor compartilhamento -->
-    <meta name="description" content="FC - O melhor frango frito do mundo">
+    <!-- Meta tags -->
+    <meta name="description" content="Cardápio FC - O melhor frango frito do mundo">
     <meta name="theme-color" content="#e4002b">
     
-    <link rel="stylesheet" href="styles.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="cardapio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -22,7 +24,9 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="logo.svg" alt="FC Logo" class="logo-img">
+                <a href="../index.html">
+                    <img src="../logo.svg" alt="FC Logo" class="logo-img">
+                </a>
             </div>
             
             <!-- Menu Mobile Button -->
@@ -36,25 +40,25 @@
             <div class="nav-container">
                 <ul class="nav-links">
                     <li>
-                        <a href="cardapio/index.html" class="nav-link">
+                        <a href="index.html" class="nav-link active">
                             <i class="fas fa-utensils"></i>
                             <span>Cardápio</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#promocoes" class="nav-link">
+                        <a href="../index.html#promocoes" class="nav-link">
                             <i class="fas fa-tags"></i>
                             <span>Promoções</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#sobre" class="nav-link">
+                        <a href="../index.html#sobre" class="nav-link">
                             <i class="fas fa-info-circle"></i>
                             <span>Sobre</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#contato" class="nav-link">
+                        <a href="../index.html#contato" class="nav-link">
                             <i class="fas fa-envelope"></i>
                             <span>Contato</span>
                         </a>
@@ -63,77 +67,65 @@
                 
                 <!-- Carrinho e Login -->
                 <div class="nav-actions">
-                    <div class="cart-icon">
+                    <a href="../carrinho/index.html" class="cart-icon">
                         <i class="fas fa-shopping-cart"></i>
                         <span class="cart-count">0</span>
-                    </div>
-                    <a href="login/index.html" class="login-btn">
+                    </a>
+                    <button class="login-btn">
                         <i class="fas fa-user"></i>
                         <span>Entrar</span>
-                    </a>
+                    </button>
                 </div>
             </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="video-background">
-            <video autoplay muted loop playsinline id="hero-video" poster="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80">
-                <source src="https://cdn.coverr.co/videos/coverr-fried-chicken-close-up-4282/1080p.mp4" type="video/mp4">
-                <source src="https://cdn.coverr.co/videos/coverr-fried-chicken-close-up-4282/1080p.webm" type="video/webm">
-                <!-- Fallback para navegadores que não suportam vídeo -->
-                <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Frango Frito">
-            </video>
-            <div class="video-overlay"></div>
-        </div>
-        <div class="hero-content">
-            <h1>O Melhor Frango Frito do Mundo</h1>
-            <p>Experimente nossa receita secreta de 11 ervas e especiarias</p>
-            <a href="cardapio/index.html" class="cta-button">Peça Agora</a>
-        </div>
-    </section>
-
-    <!-- Menu Section -->
-    <section id="menu" class="menu-section">
-        <div class="section-header">
-            <h2>Nosso Cardápio</h2>
+    <section class="menu-hero">
+        <div class="menu-hero-content">
+            <h1>Nosso Cardápio</h1>
             <p>Descubra nossas deliciosas opções</p>
         </div>
-        
-        <div class="menu-carousel">
-            <button class="carousel-btn prev" id="prevBtn" aria-label="Slide anterior">
-                <i class="fas fa-chevron-left"></i>
+    </section>
+
+    <!-- Categorias do Menu -->
+    <section class="menu-categories">
+        <div class="category-tabs">
+            <button class="category-tab active" data-category="combos">
+                <i class="fas fa-box"></i>
+                Combos
             </button>
-            
-            <div class="carousel-container">
-                <div class="carousel-track" id="carouselTrack">
-                    <!-- Os itens serão inseridos via JavaScript -->
-                </div>
-            </div>
-
-            <button class="carousel-btn next" id="nextBtn" aria-label="Próximo slide">
-                <i class="fas fa-chevron-right"></i>
+            <button class="category-tab" data-category="frangos">
+                <i class="fas fa-drumstick-bite"></i>
+                Frangos
             </button>
-        </div>
-
-        <div class="carousel-dots" id="carouselDots" role="tablist">
-            <!-- Os dots serão inseridos via JavaScript -->
-        </div>
-
-        <div class="menu-cta">
-            <a href="cardapio/index.html" class="menu-btn">
-                Ver Cardápio Completo
-                <i class="fas fa-arrow-right"></i>
-            </a>
+            <button class="category-tab" data-category="sanduiches">
+                <i class="fas fa-hamburger"></i>
+                Sanduíches
+            </button>
+            <button class="category-tab" data-category="batatas">
+                <i class="fas fa-french-fries"></i>
+                Batatas
+            </button>
+            <button class="category-tab" data-category="acompanhamentos">
+                <i class="fas fa-utensils"></i>
+                Acompanhamentos
+            </button>
+            <button class="category-tab" data-category="bebidas">
+                <i class="fas fa-glass-whiskey"></i>
+                Bebidas
+            </button>
+            <button class="category-tab" data-category="sobremesas">
+                <i class="fas fa-ice-cream"></i>
+                Sobremesas
+            </button>
         </div>
     </section>
 
-    <!-- Promoções Section -->
-    <section id="promocoes" class="promotions-section">
-        <h2>Promoções Especiais</h2>
-        <div class="promotions-grid">
-            <!-- Promotions will be added dynamically with JavaScript -->
+    <!-- Itens do Menu -->
+    <section class="menu-items">
+        <div class="menu-grid" id="menu-grid">
+            <!-- Os itens serão carregados dinamicamente via JavaScript -->
         </div>
     </section>
 
@@ -142,7 +134,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <div class="footer-brand">
-                    <img src="logo.svg" alt="FC Logo" class="footer-logo">
+                    <img src="../logo.svg" alt="FC Logo" class="footer-logo">
                     <p class="footer-slogan">O melhor frango frito do mundo, com nossa receita secreta de 11 ervas e especiarias.</p>
                 </div>
             </div>
@@ -201,8 +193,9 @@
     </button>
 
     <!-- Scripts -->
-    <script src="js/cart.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="cardapio.js"></script>
     <script>
         // Botão Voltar ao Topo
         const backToTopButton = document.querySelector('.back-to-top');

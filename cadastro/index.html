@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - FC</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    
+    <!-- Meta tags -->
+    <meta name="description" content="Cadastro FC - Crie sua conta">
+    <meta name="theme-color" content="#e4002b">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../logo.svg" alt="FC Logo" class="logo-img">
+                </a>
+            </div>
+            <div class="nav-actions">
+                <a href="../index.html" class="home-btn" title="Voltar para a página inicial">
+                    <i class="fas fa-home"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Cadastro Section -->
+    <section class="cadastro-section">
+        <div class="cadastro-container">
+            <div class="cadastro-header">
+                <h1>Crie sua conta</h1>
+                <p>Preencha os dados abaixo para se cadastrar</p>
+            </div>
+
+            <form class="cadastro-form" id="cadastroForm">
+                <!-- Dados Pessoais -->
+                <div class="form-section">
+                    <h2>Dados Pessoais</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="nome">
+                                <i class="fas fa-user"></i>
+                                Nome Completo
+                            </label>
+                            <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cpf">
+                                <i class="fas fa-id-card"></i>
+                                CPF
+                            </label>
+                            <input type="text" id="cpf" name="cpf" required placeholder="000.000.000-00">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dataNascimento">
+                                <i class="fas fa-calendar"></i>
+                                Data de Nascimento
+                            </label>
+                            <input type="date" id="dataNascimento" name="dataNascimento" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefone">
+                                <i class="fas fa-phone"></i>
+                                Telefone
+                            </label>
+                            <input type="tel" id="telefone" name="telefone" required placeholder="(00) 00000-0000">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dados de Acesso -->
+                <div class="form-section">
+                    <h2>Dados de Acesso</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="fas fa-envelope"></i>
+                                Email
+                            </label>
+                            <input type="email" id="email" name="email" required placeholder="Seu email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="senha">
+                                <i class="fas fa-lock"></i>
+                                Senha
+                            </label>
+                            <div class="password-input">
+                                <input type="password" id="senha" name="senha" required placeholder="Sua senha">
+                                <button type="button" class="toggle-password">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmarSenha">
+                                <i class="fas fa-lock"></i>
+                                Confirmar Senha
+                            </label>
+                            <div class="password-input">
+                                <input type="password" id="confirmarSenha" name="confirmarSenha" required placeholder="Confirme sua senha">
+                                <button type="button" class="toggle-password">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Endereço -->
+                <div class="form-section">
+                    <h2>Endereço</h2>
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="cep">
+                                <i class="fas fa-map-marker-alt"></i>
+                                CEP
+                            </label>
+                            <input type="text" id="cep" name="cep" required placeholder="00000-000">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="endereco">
+                                <i class="fas fa-road"></i>
+                                Endereço
+                            </label>
+                            <input type="text" id="endereco" name="endereco" required placeholder="Rua, Avenida, etc">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="numero">
+                                <i class="fas fa-home"></i>
+                                Número
+                            </label>
+                            <input type="text" id="numero" name="numero" required placeholder="Nº">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="complemento">
+                                <i class="fas fa-building"></i>
+                                Complemento
+                            </label>
+                            <input type="text" id="complemento" name="complemento" placeholder="Apto, Bloco, etc">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bairro">
+                                <i class="fas fa-map"></i>
+                                Bairro
+                            </label>
+                            <input type="text" id="bairro" name="bairro" required placeholder="Seu bairro">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cidade">
+                                <i class="fas fa-city"></i>
+                                Cidade
+                            </label>
+                            <input type="text" id="cidade" name="cidade" required placeholder="Sua cidade">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="estado">
+                                <i class="fas fa-flag"></i>
+                                Estado
+                            </label>
+                            <select id="estado" name="estado" required>
+                                <option value="">Selecione</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Termos e Condições -->
+                <div class="form-section">
+                    <div class="terms-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="termos" required>
+                            <span>Li e aceito os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a></span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="cadastro-button">
+                    <i class="fas fa-user-plus"></i>
+                    Criar Conta
+                </button>
+
+                <div class="login-link">
+                    <p>Já tem uma conta? <a href="../login/index.html">Faça login</a></p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-brand">
+                    <img src="../logo.svg" alt="FC Logo" class="footer-logo">
+                    <p class="footer-slogan">O melhor frango frito do mundo, com nossa receita secreta de 11 ervas e especiarias.</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Horário de Funcionamento</h3>
+                <p>Segunda a Domingo: 10h às 22h</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Telefone: (11) 1234-5678</p>
+                <p>Email: contato@fc.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links Úteis</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-right"></i>Seja um Franqueado</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i>Trabalhe Conosco</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i>Fale Conosco</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i>FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 FC. Todos os direitos reservados.</p>
+            <div class="footer-legal">
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Termos de Uso</a>
+                <a href="#">Regulamentos</a>
+                <a href="#">Seja um Franqueado</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="cadastro.js"></script>
+</body>
+</html> 
